@@ -1,4 +1,4 @@
-# Simple deployment of a VM with Tags
+# Simple deployment of a VM with Tags - Demo
 
 <IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/101-vm-tags/PublicLastTestDate.svg" />&nbsp;
 <IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/101-vm-tags/PublicDeployment.svg" />&nbsp;
