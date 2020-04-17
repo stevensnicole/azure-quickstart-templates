@@ -9,10 +9,10 @@
 <IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/tableau-server-single-node/BestPracticeResult.svg" />&nbsp;
 <IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/tableau-server-single-node/CredScanResult.svg" />&nbsp;
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Ftableau-server-single-node%2Fazuredeploy.json" target="_blank">
-<img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/>
+<img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true"/>
 </a>
 <a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Ftableau-server-single-node%2Fazuredeploy.json" target="_blank">
-<img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.png"/>
+<img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true"/>
 </a>
 
 This template deploys a **Standalone Tableau Server instance on a Virtual Machine running Ubuntu, RHEL or CentOS** in its own Virtual Network.
@@ -85,7 +85,7 @@ When the resource template creates the Virtual Machine listed above it executes 
 
 The steps performed by the configuration script are as follows:
 + Create secrets, registration.json & config.json files to reflect the parametrized inputs from the template
-+ Download the Tableau Server <a href=https://www.tableau.com/support/releases/server>installer</a> - this template is currently using Linux version 2019.4.0
++ Download the Tableau Server <a href=https://www.tableau.com/support/releases/server>installer</a> - this template is currently using Tableau Server linux version 2020.1.1 and is updated frequently to use the most recent version of Tableau Server
 + Download the automated installer script (maintained in a separate <a href=https://github.com/tableau/server-install-script-samples/tree/master/linux/automated-installer>github repo</a>) and modify permissions.
 + Execute command to perform a silent install (refer to previous bullet for additional documentation)
 + Clean up all installation & configuration files

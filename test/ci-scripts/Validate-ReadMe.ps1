@@ -22,9 +22,9 @@ $badges = @(
 
 $buttons = @(
     "https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F$s%2Fazuredeploy.json"
-    "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"
+    "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true"
     "http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F$s%2Fazuredeploy.json"
-    "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.png"
+    "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true"
 )
 #$buttons.Replace("#sampleName#", $sampleName.Replace("\", "/"))
 
@@ -39,7 +39,7 @@ if(-not ($readme.StartsWith("# "))){
 
 #proper src attribute for badges
 foreach($badge in $badges){
-    if(-not ($readme -like "*$badge*")){
+    if(-not ($readme -clike "*$badge*")){
         $dumpHelp = $true
         Write-Error "Readme is missing badge: $badge"
     }
@@ -47,7 +47,7 @@ foreach($badge in $badges){
 
 #Proper href and src attribute for buttons
 foreach($button in $buttons){
-    if(-not ($readme -like "*$button*")){
+    if(-not ($readme -clike "*$button*")){
         $dumpHelp = $true
         Write-Error "Readme button incorrect HREF or SRC attribute: $button"
     }
@@ -66,10 +66,10 @@ if( $dumpHelp ){
     
     
     <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F$s%2Fazuredeploy.json" target="_blank">
-    <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/>
+    <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true"/>
     </a>
     <a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F$s%2Fazuredeploy.json" target="_blank">
-    <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.png"/>
+    <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true"/>
     </a>
 "@
 
